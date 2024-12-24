@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinidad Disability Support - Empowering Accessibility in T&T</title>
+    <meta name="description" content="Discover disabled-friendly locations across Trinidad and Tobago. Access local resources, support services, and connect with the T&T disability community.">
+    <meta name="keywords" content="Trinidad and Tobago, disability support, accessible places, wheelchair accessible, disability resources, T&T">
+    <meta name="author" content="Trinidad Disability Support">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.trinidaddisabilitysupport.org">
+    <meta property="og:title" content="Trinidad Disability Support - Empowering Accessibility in T&T">
+    <meta property="og:description" content="Discover disabled-friendly locations and resources across Trinidad and Tobago. Empowering accessibility and community support in T&T.">
+    <meta property="og:image" content="https://www.trinidaddisabilitysupport.org/og-image.jpg">
+    <meta property="og:url" content="https://www.trinidaddisabilitysupport.org">
+    <meta property="og:type" content="website">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Trinidad Disability Support",
+      "url": "https://www.trinidaddisabilitysupport.org",
+      "logo": "https://www.trinidaddisabilitysupport.org/logo.png",
+      "description": "Empowering and supporting the disabled community in Trinidad and Tobago with resources, services, and accessible place information.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Trinidad and Tobago"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-868-123-4567",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+    <style>
+        :root {
+            --primary-color: #CE1126;
+            --secondary-color: #000000;
+            --accent-color: #FFFFFF;
+            --background-color: #F5F5F5;
+            --text-color: #333333;
+            --light-text: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .skip-link {
+            background: var(--primary-color);
+            color: var(--accent-color);
+            padding: 0.5rem 1rem;
+            position: absolute;
+            top: -40px;
+            left: 1rem;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            color: var(--accent-color);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            margin-right: 10px;
+            height: 40px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: var(--accent-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover, nav a:focus {
+            background-color: var(--primary-color);
+            color: var(--accent-color);
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .auth-buttons .btn {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        #showcase {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(206, 17, 38, 0.8)), url('https://images.unsplash.com/photo-1541752917792-3d6d0b13c6a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            min-height: 400px;
+            color: var(--accent-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        #showcase h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #showcase p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--accent-color);
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover, .btn:focus {
+            background: var(--secondary-color);
+            color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 3rem 0;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+
+        #map-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        #map {
+            flex: 1;
+            height: 400px;
+            min-width: 300px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        #places-list-container {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        #search-box {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #places-list {
+            list-style-type: none;
+            max-height: 350px;
+            overflow-y: auto;
+        }
+
+        #places-list li {
+            background: white;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        #places-list li:hover {
+            transform: translateY(-5px);
+        }
+
+        #resources {
+            background-color: var(--secondary-color);
+            color: var(--accent-color);
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .resource-card {
+            background: var(--accent-color);
+            color: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .resource-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        #contact {
+            background-color: var(--primary-color);
+            color: var(--accent-color);
+        }
+
+        #contact form {
+            display: grid;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        #contact input,
+        #contact textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #contact textarea {
+            height: 150px;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--accent-color);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: var(--primary-color);
+        }
+
+        .accessibility-controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .accessibility-controls button {
+            background: var(--primary-color);
+            color: var(--accent-color);
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .accessibility-controls button:hover,
+        .accessibility-controls button:focus {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        @media(max-width: 768px) {
+            header {
+                padding: 0.5rem 0;
+            }
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .logo {
+                margin-bottom: 0.5rem;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+                width: 100%;
+            }
+            nav a {
+                display: block;
+                padding: 0.5rem 0;
+            }
+            .auth-buttons {
+                width: 100%;
+                justify-content: space-between;
+                margin-top: 0.5rem;
+            }
+            .auth-buttons .btn {
+                flex: 1;
+                text-align: center;
+            }
+            #showcase {
+                margin-top: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="prj.webp" alt="Trinidad Disability Support Logo" width="50" height="50">
+                <span>Trinidad Disability Support</span>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#map-section">Accessible Places</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="auth-buttons">
+                    <a href="login.html" class="btn">Log In</a>
+                    <a href="signup.html" class="btn">Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="showcase">
+            <div class="container">
+                <h1>Empowering Accessibility in Trinidad and Tobago</h1>
+                <p>Discover disabled-friendly locations across our beautiful twin islands</p>
+                <a href="#map-section" class="btn">Find Accessible Places</a>
+            </div>
+        </section>
+
+        <section id="map-section" class="container">
+            <h2>Disabled-Friendly Places in Trinidad and Tobago</h2>
+            <div id="map" aria-label="Map of disabled-friendly places in Trinidad and Tobago"></div>
+            <div id="places-list-container">
+                <input type="text" id="search-box" placeholder="Search for places..." aria-label="Search for places">
+                <ul id="places-list" aria-label="List of disabled-friendly places in Trinidad and Tobago"></ul>
+            </div>
+        </section>
+
+        <section id="resources">
+            <div class="container">
+                <h2>Local Disability Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h3>Government Programs</h3>
+                        <p>Information on T&T government support and services for disabled individuals.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Educational Resources</h3>
+                        <p>Learning materials and support for disabled students in Trinidad and Tobago.</p>
+                        <a href="#" class="btn">Explore</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Assistive Technologies</h3>
+                        <p>Information about the latest assistive technologies available in T&T.</p>
+                        <a href="#" class="btn">Discover</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Local Support Groups</h3>
+                        <p>Connect with support groups for various disabilities in Trinidad and Tobago.</p>
+                        <a href="#" class="btn">Join</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form id="contact-form">
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                    <input type="email" id="email" name="email" required placeholder="Your Email">
+                    <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Trinidad Disability Support. All rights reserved.</p>
+            <p>Contact us: <a href="/cdn-cgi/l/email-protection#7c15121a133c080e151215181d1818150f1d1e15101508050f090c0c130e0852130e1b"><span class="__cf_email__" data-cfemail="6c05020a032c181e050205080d0808051f0d0e05000518151f191c1c031e1842031e0b">[email&#160;protected]</span></a></p>
+            <p>Phone: +1 (868) 123-4567</p>
+            <p><a href="/sitemap.xml">Sitemap</a> | <a href="/privacy-policy">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <div class="accessibility-controls">
+        <button id="font-size-toggle" aria-label="Toggle font size">
+            <i class="fas fa-text-height"></i>
+        </button>
+        <button id="high-contrast-toggle" aria-label="Toggle high contrast">
+            <i class="fas fa-adjust"></i>
+        </button>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap" async defer></script>
+    <script>
+        // Google Maps and Places API functionality
+        let map;
+        let service;
+        let infowindow;
+        let markers = [];
+
+        function initMap() {
+            // Center on Port of Spain, Trinidad
+            const trinidad = new google.maps.LatLng(10.6596, -61.5196);
+
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: trinidad,
+                zoom: 12
+            });
+
+            infowindow = new google.maps.InfoWindow();
+            service = new google.maps.places.PlacesService(map);
+
+            // Search for accessible places
+            searchAccessiblePlaces();
+
+            // Add event listener for search box
+            const searchBox = document.getElementById('search-box');
+            searchBox.addEventListener('input', debounce(searchAccessiblePlaces, 300));
+        }
+
+        function searchAccessiblePlaces() {
+            const searchQuery = document.getElementById('search-box').value;
+            const trinidad = map.getCenter();
+
+            const request = {
+                location: trinidad,
+                radius: '50000', // 50km radius
+                query: 'wheelchair accessible ' + searchQuery
+            };
+
+            service.textSearch(request, callback);
+        }
+
+        function callback(results, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                clearMarkers();
+                const placesList = document.getElementById('places-list');
+                placesList.innerHTML = ''; // Clear existing list
+
+                for (let i = 0; i < results.length; i++) {
+                    createMarker(results[i]);
+                    addToPlacesList(results[i]);
+                }
+            }
+        }
+
+        function createMarker(place) {
+            const marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location,
+                title: place.name
+            });
+
+            markers.push(marker);
+
+            google.maps.event.addListener(marker, 'click', function() {
+                const content = `
+                    <div>
+                        <h3>${place.name}</h3>
+                        <p>${place.formatted_address}</p>
+                        <p>Rating: ${place.rating ? place.rating + '/5' : 'N/A'}</p>
+                    </div>
+                `;
+                infowindow.setContent(content);
+                infowindow.open(map, this);
+            });
+        }
+
+        function clearMarkers() {
+            markers.forEach(marker => marker.setMap(null));
+            markers = [];
+        }
+
+        function addToPlacesList(place) {
+            const placesList = document.getElementById('places-list');
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <h3>${place.name}</h3>
+                <p>${place.formatted_address}</p>
+                <p>Rating: ${place.rating ? place.rating + '/5' : 'N/A'}</p>
+            `;
+            li.addEventListener('click', () => {
+                map.setCenter(place.geometry.location);
+                map.setZoom(15);
+            });
+            placesList.appendChild(li);
+        }
+
+        // Debounce function to limit API calls
+        function debounce(func, delay) {
+            let timeoutId;
+            return function (...args) {
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(() => func.apply(this, args), delay);
+            };
+        }
+
+        // Contact form submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Here you would typically send this data to a server
+            console.log('Form submitted:', { name, email, message });
+
+            // Show a success message (in a real application, do this after successful server response)
+            alert('Thank you for your message. We will get back to you soon!');
+            contactForm.reset();
+        });
+
+        // Accessibility controls
+        const fontSizeToggle = document.getElementById('font-size-toggle');
+        const highContrastToggle = document.getElementById('high-contrast-toggle');
+        let isLargeFont = false;
+        let isHighContrast = false;
+
+        fontSizeToggle.addEventListener('click', () => {
+            if (isLargeFont) {
+                document.body.style.fontSize = '1rem';
+                isLargeFont = false;
+            } else {
+                document.body.style.fontSize = '1.2rem';
+                isLargeFont = true;
+            }
+        });
+
+        highContrastToggle.addEventListener('click', () => {
+            if (isHighContrast) {
+                document.documentElement.style.setProperty('--primary-color', '#CE1126');
+                document.documentElement.style.setProperty('--secondary-color', '#000000');
+                document.documentElement.style.setProperty('--accent-color', '#FFFFFF');
+                document.documentElement.style.setProperty('--background-color', '#F5F5F5');
+                document.documentElement.style.setProperty('--text-color', '#333333');
+                isHighContrast = false;
+            } else {
+                document.documentElement.style.setProperty('--primary-color', '#FFFFFF');
+                document.documentElement.style.setProperty('--secondary-color', '#000000');
+                document.documentElement.style.setProperty('--accent-color', '#FFFF00');
+                document.documentElement.style.setProperty('--background-color', '#000000');
+                document.documentElement.style.setProperty('--text-color', '#FFFFFF');
+                isHighContrast = true;
+            }
+        });
+
+        // Check authentication status
+        function checkAuthStatus() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            const authButtons = document.querySelector('.auth-buttons');
+            if (isLoggedIn === 'true') {
+                authButtons.innerHTML = `
+                    <a href="user.html" class="btn">My Profile</a>
+                    <button onclick="logout()" class="btn">Log Out</button>
+                `;
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = 'index.html';
+        }
+
+        // Call checkAuthStatus when the page loads
+        document.addEventListener('DOMContentLoaded', checkAuthStatus);
+
+        // Add this to the existing script section
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+            } else {
+                header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            }
+        });
+    </script>
+</body>
+</html>
+

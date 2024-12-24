@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up / Login - Trinidad Disability Support</title>
+    <meta name="description" content="Join Trinidad Disability Support to access and contribute to our database of accessible locations across Trinidad and Tobago.">
+    <meta name="keywords" content="sign up, login, Trinidad and Tobago, disability support, accessibility">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="prj.webp" alt="Trinidad Disability Support Logo" width="50" height="50">
+                <span>Trinidad Disability Support</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#map-section">Accessible Places</a></li>
+                <li><a href="index.html#resources">Resources</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="auth-container">
+            <div class="auth-box sign-up">
+                <h2>Sign Up</h2>
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm-password">Confirm Password</label>
+                        <input type="password" id="signup-confirm-password" name="confirm-password" required>
+                    </div>
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+                <p>Already have an account? <a href="#" class="switch-form" data-target="login">Log In</a></p>
+            </div>
+
+            <div class="auth-box login hidden">
+                <h2>Log In</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn">Log In</button>
+                </form>
+                <p>Don't have an account? <a href="#" class="switch-form" data-target="signup">Sign Up</a></p>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Trinidad Disability Support. All rights reserved.</p>
+            <p>Contact us: <a href="mailto:info@trinidaddisabilitysupport.org">info@trinidaddisabilitysupport.org</a></p>
+            <p>Phone: +1 (868) 123-4567</p>
+            <p><a href="/sitemap.xml">Sitemap</a> | <a href="/privacy-policy">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <div class="accessibility-controls">
+        <button id="font-size-toggle" aria-label="Toggle font size">
+            <i class="fas fa-text-height"></i>
+        </button>
+        <button id="high-contrast-toggle" aria-label="Toggle high contrast">
+            <i class="fas fa-adjust"></i>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
